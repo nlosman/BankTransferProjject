@@ -16,7 +16,8 @@ public class Fatmanur extends Parent {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-
+    @FindBy(linkText ="Register" )
+    public WebElement registerButton;
     @FindBy(name = "username")
     public WebElement usernameInput;
     @FindBy(name = "password")
