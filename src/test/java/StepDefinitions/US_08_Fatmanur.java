@@ -21,12 +21,15 @@ public class US_08_Fatmanur {
         GWD.getDriver().get("https://parabank.parasoft.com/");
     }
 
-
+    @When("Click Register button")
+    public void clickRegisterButton() {
+        ft.myClick(ft.registerButton);
+    }
 
     @When("Enter username and password")
     public void enterUsernameAndPassword() {
-        ft.mySendKeys(ft.usernameInput, "esin1");
-        ft.mySendKeys(ft.passwordInput, "esin2");
+        ft.mySendKeys(ft.usernameInput, "yagizbaba");
+        ft.mySendKeys(ft.passwordInput, "123456");
     }
 
     @Then("Click Login button")
@@ -41,8 +44,8 @@ public class US_08_Fatmanur {
 
     @When("Enter Loan Amount and Down Payment")
     public void enterLoanAmountAndDownPayment() {
-        ft.mySendKeys(ft.enterLoanAmount, "500");
-        ft.mySendKeys(ft.enterDownPayment, "50");
+        ft.mySendKeys(ft.enterLoanAmount, "1000");
+        ft.mySendKeys(ft.enterDownPayment, "500");
     }
 
     @Then("Select account number")
@@ -95,6 +98,7 @@ public class US_08_Fatmanur {
         pn.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='You do not have sufficient funds for the given down payment.']")));
         Assert.assertTrue(ft.confirmMessage2.getText().contains("You do not have"));
     }
+
 
 
 }

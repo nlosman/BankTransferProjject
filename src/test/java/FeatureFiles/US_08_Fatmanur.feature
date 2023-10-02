@@ -2,10 +2,18 @@ Feature: Credit Application Multi Scenario
 
   Background:
 
+   # calistigimiz site bazen register istiyor,
+
     Given Navigate to Parabank
+   # When Click Register button
+   # Then fill out the registration form
+   # And Click all
+
+     # bazende sadece username ve password istiyor
+
     When Enter username and password
     Then Click Login button
-    And Click Request Loan link
+    Then Click Request Loan link
 
   Scenario: Credit Application
 
