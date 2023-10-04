@@ -5,6 +5,7 @@ Feature: Account functionality
     When Enter valid username and password
     Then LoginIn button click
 
+  @Accounts @Regression
   Scenario: Accessing Account Details
     Given Show Account Overview
     Then User should be display Account Summary
