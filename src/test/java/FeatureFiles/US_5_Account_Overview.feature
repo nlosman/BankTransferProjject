@@ -1,5 +1,10 @@
 Feature: Account functionality
 
+  Background:
+    Given Navigate to url
+    When Enter valid username and password
+    Then LoginIn button click
+
   Scenario: Accessing Account Details
     Given Show Account Overview
     Then User should be display Account Summary
